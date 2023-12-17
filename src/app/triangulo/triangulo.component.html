@@ -1,0 +1,36 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Triángulo
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Lado A</ion-label>  
+      <ion-input type="number" [(ngModel)]="triangulo.ladoA" fill="solid" placeholder="0">
+      </ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Lado B</ion-label>
+      <ion-input type="number" [(ngModel)]="triangulo.ladoB" fill="solid" placeholder="0">
+      </ion-input>
+    </ion-item>
+  
+    <ion-item> 
+      <ion-label position="floating">Lado C</ion-label>
+      <ion-input type="number" [(ngModel)]="triangulo.ladoC" fill="solid" placeholder="0">
+      </ion-input>
+    </ion-item>
+  
+    <ion-button
+      (click)="calcular()">
+      Calcular
+    </ion-button>
+  
+    <p *ngIf="resultado">
+      Perímetro: {{resultado}} 
+    </p>
+  </ion-card-content>
+</ion-card>
